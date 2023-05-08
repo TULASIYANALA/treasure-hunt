@@ -1,2 +1,2 @@
-# SECRETGLOW--skincare-shopping-website
+# TREASURE HUNT
 LEVEL 7 CAPSTONE PROJECT
