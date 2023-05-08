@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: url('https://png.pngtree.com/58pic/32/80/14/15I58PICvHuxyZ58PICSB58PICfzF_PIC2018.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <script>
+        function publishToTable() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const answer = document.getElementById('answer').value;
+            const error = document.getElementById('error');
+            error.innerHTML = (!name || !email || !answer) ? 'Name ,Email and Answer both values are required.' : '';
+            if (name && email && answer) {
+                const tableElement = document.getElementById('table');
+                const trElement = document.createElement('tr');
+                const tbodyElement = document.createElement('tbody');
+                const nameEle = document.createElement('td');
+                const emailEle = document.createElement('td');
+                const answerEle = document.createElement('td');
+
+                nameEle.innerHTML = name;
+                emailEle.innerHTML = email;
+                answerEle.innerHTML = answer;
+                trElement.appendChild(nameEle);
+                trElement.appendChild(emailEle);
+                trElement.appendChild(answerEle);
+                tbodyElement.appendChild(trElement);
+                tableElement.appendChild(tbodyElement);
+
+            }
+        }
+    </script>
+    <h1>ENTER YOUR ANSWER HERE</h1>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        div.complete {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10%;
+            overflow: auto;
+        }
+        
+        div.form {
+            height: 300px;
+        }
+        
+        label {
+            margin: 20px;
+            display: block;
+            font-size: 32px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        }
+        
+        input {
+            padding: 3px;
+        }
+        
+        span {
+            color: red;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        button {
+            padding: 10px;
+            margin-top: 40px;
+            left: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        }
+        
+        div#tables {
+            height: 100px;
+            overflow: auto;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid red;
+            border-collapse: collapse;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+            padding: 10px;
+        }
+        
+        th {
+            width: 10%;
+        }
+    </style>
+    <div class="complete">
+        <div class="form">
+            <label>Name: <input id="name" type="text"></label>
+            <label>email: <input id="email" type="text"></label>
+            <label>Answer: <input id="answer" type="text"></label>
+
+            <span id="error"></span>
+            <button onclick="publishToTable()">Submit</button>
+        </div>
+        <div id="tables">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="center">
+
+            <body>
+
+                <form action="/leaderboard" method="GET">
+                    <div class="form-group">
+                        <div class="container">
+                            <button>FINAL SUBMIT </button>
+                        </div>
+                    </div>
+                </form>
+
+            </body>
+
+</html>

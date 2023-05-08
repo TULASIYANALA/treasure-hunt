@@ -1,0 +1,60 @@
+<html>
+<title>Treasure hunt</title>
+
+<head>
+    <meta name="viewport" content="width=device-width" , initial-scale=1 charset="utf-8">
+    <style>
+        body {
+            background-image: url('https://www.educatall.com/images/Treasure-hunt-FB.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+        input[type=text]:focus,
+        input[type=password]:focus {
+            outline: none;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        p {
+            text-align: center;
+        }
+        
+        div {
+            text-align: center;
+        }
+    </style>
+
+    <body>
+        <h1>TREASURE HUNT</h1>
+        <h1>WELCOME TO LOGIN PAGE</h1>
+        <div class="container about">
+            <a href="file:///C:/Users/tulas/Desktop/about.html">About Us</a>&nbsp&nbsp &nbsp
+            <a href="file:///C:/Users/tulas/Desktop/register.html">signup</a>.
+        </div>
+        <form action="file:///C:/Users/tulas/Desktop/gamepage.html">
+            <div class="container">
+
+                <h2>You can enter your details </h2>
+                <hr>
+
+                <label for="email"><b>Enter Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required><br><br>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+                <hr>
+                <button type="submit">Submit Button</button>
+                <div class="container signin">
+                    <p>Didn't have an account? <a href="file:///C:/Users/tulas/Desktop/register.html">signup</a>.</p>
+                </div>
+            </div>
+        </form>
+
+    </body>
+
+</html>
